@@ -14,6 +14,7 @@ const io=sockeio(server);
 
 io.on("connection",(socket)=>{
     console.log("we have a new conection");
+    
     socket.on("join",({name,room},callback)=>{
         console.log(name,room)
     const { error, user } = addUser({ id: socket.id, name, room });
@@ -27,7 +28,8 @@ io.on("connection",(socket)=>{
     })
     socket.on("sendMessage",(message,callback)=>{
         const user=getUser(socket.id);
-      io.to(user.room).emit("message",{user:user.name,text:message}); 
+      io.to(user.room).emit("message",{user:user.name,text:message});
+      callback();
     })
     socket.on("disconnect",()=>{
         console.log("user had left")
