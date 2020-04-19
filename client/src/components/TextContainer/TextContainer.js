@@ -28,7 +28,7 @@ const TextContainer = ({ users }) => (
     </div>
     {users ? (
       <div>
-        <h1>Manada actual:</h1>
+        <h1>Lobos en la Manada:</h1>
         <div className="activeContainer">
           <h2>
             {users.map(({ name }) => (
