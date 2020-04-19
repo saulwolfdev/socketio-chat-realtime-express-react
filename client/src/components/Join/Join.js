@@ -7,7 +7,7 @@ export default function SignIn() {
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
-        <div className="heading">BIENVENIDO AL A MANADA</div>
+        <div className="heading">BIENVENIDO A LA MANADA</div>
         <div>
           <input
             type="text"
