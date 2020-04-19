@@ -23,11 +23,11 @@ io.on("connect",(socket)=>{
     socket.join(user.room);
      
     socket.emit("message",{
-    user:"admin",
-    text:`${user.name}, Welcome to room ${user.room}.`,});
+    user:"Alfa",
+    text:`${user.name}, Bienvenido a la manada ${user.room}.`,});
     socket.broadcast
     .to(user.room)
-    .emit("message",{user:"admin",text:`${user.name}, has joined!`});
+    .emit("message",{user:"Alfa",text:`${user.name}, Es un nuevo lobo!`});
 
     io.to(user.room).emit("roomData",{
       room:user.room, 
@@ -48,8 +48,8 @@ io.on("connect",(socket)=>{
        const user = removeUser(socket.id);
     if (user) {
       io.to(user.room).emit("message", {
-        user: "Admin",
-        text: `${user.name} has left.`,
+        user: "Alfa",
+        text: `${user.name} Se fue de la Manada.`,
       });
       io.to(user.room).emit("roomData", {
         room: user.room,

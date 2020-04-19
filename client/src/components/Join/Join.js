@@ -12,7 +12,7 @@ export default function SignIn() {
           <input
             type="text"
             className="joinInput"
-            placeholder="Nombre"
+            placeholder="Tu nombre"
             onChange={(event) => setName(event.target.value)}
           />
         </div>
@@ -20,7 +20,7 @@ export default function SignIn() {
           <input
             type="text"
             className="joinInput mt-20"
-            placeholder="Manada"
+            placeholder="Elegi una Manada"
             onChange={(event) => setRoom(event.target.value)}
           />
         </div>
@@ -29,7 +29,7 @@ export default function SignIn() {
           to={`/chat?name=${name}&room=${room}`}
         >
           <button className={"button mt-20"} type="submit">
-            ENTRAR
+          Ingresa
           </button>
         </Link>
       </div>
