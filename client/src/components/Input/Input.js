@@ -1,26 +1,20 @@
 import React from 'react';
 import "./Input.scss";
-const Input = ({setMessage, sendMessage, message}) => {
-      console.log("========>>>>>>>>>>>>>>>>>", {
-        setMessage,
-        sendMessage,
-        message,
-      });
-    return (
-      <div>
+const Input = ({setMessage, sendMessage, message}) =>(
+
           <form className="form">
             <input
               className="input"
               type="text"
-              placeholder="Type a message..."
+              placeholder="Llama la manada..."
               value={message}
               onChange={({target:{value }}) => setMessage(value)}
               onKeyPress={(event) =>event.key === "Enter" ? sendMessage(event) : null}
             />
-            <button className="sendButton" onClick={(e)=> sendMessage(e)}>Send</button>
+            <button className="sendButton" onClick={(e)=> sendMessage(e)}>AULLAR</button>
           </form>
-      </div>
+ 
     );
-}
+
  
 export default Input;
